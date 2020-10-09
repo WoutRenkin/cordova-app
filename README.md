@@ -3,7 +3,7 @@
 - **Naam**: Wout Renkin
 - **Klas**: 2APPAI C
 - **Email**: <a href="mailto:r0631168@student.thomasmore.be">r0631168@student.thomasmore.be</a>
-- **Studentnr**: r0631168@student.thomasmore.be
+- **Studentnr**: r0631168
 - **Download APK URL**: ......
 
 ![Me](./picture/me.jpg?raw=true)
