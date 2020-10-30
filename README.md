@@ -30,7 +30,15 @@ de klanten.
 ## Plug-ins in mijn app
 
 - [cordova-plugin-whitelist](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/)  
-Gebruikt voor ...
+Zorgt voor betere security, en maakt cordova configureerbaarder.
+- [cordova-plugin-dialogs](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-dialogs/)
+Deze plug-in heb ik gebruikt voor betere en mooiere alerts.
+- [cordova-plugin-email-composer](https://www.npmjs.com/package/cordova-plugin-email-composer)
+Hiermee kan ik emails genereren.
+- [cordova-plugin-qr-barcode-scanner](https://www.npmjs.com/package/cordova-plugin-qr-barcode-scanner)
+Hier kan ik een QR code scanner met oproepen.
+- [cordova-plugin-qrcodejs](https://www.npmjs.com/package/cordova-plugin-qrcodejs)
+Hiermee kan ik een QR code genereren.
 
 
 ## Tip: GitHub Markdown
