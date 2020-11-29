@@ -40,6 +40,9 @@ Hier kan ik een QR code scanner met oproepen.
 - [cordova-plugin-qrcodejs](https://www.npmjs.com/package/cordova-plugin-qrcodejs)
 Hiermee kan ik een QR code genereren.
 
+## Info pagina over de app
+
+https://wout-renkin.github.io/easytrack.io/ 
 
 ## Tip: GitHub Markdown
 [https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax]()
