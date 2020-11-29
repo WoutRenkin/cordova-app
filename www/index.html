@@ -1,42 +1,333 @@
-<!doctype html>
-<html lang="nl">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/materialize.1.0.0.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <title>Project Cordova</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>EasyTrack</title>
 </head>
+
 <body>
-<header class="navbar-fixed">
-    <nav class="grey">
-        <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo center">Project Cordova</a>
-        </div>
+
+  <!-- Navbar -->
+  <div class="navbar-fixed">
+    <nav class="blue darken-3">
+      <div class="nav-wrapper container">
+        <a href="#!" id="title" class="brand-logo white-text left">EasyTrack</a>
+        <a href="#!" class="right dropdown-trigger white-text" data-target='dropdown'><i
+            class="material-icons">more_vert</i></a>
+      </div>
     </nav>
-</header>
-<main class="container">
-    <div class="row">
-        <p>Custom + overwrite css styles: <b>css/app.css</b></p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos nihil possimus, quidem
-            recusandae
-            velit! Alias aut deserunt ducimus iusto perspiciatis quam quo repellendus reprehenderit repudiandae
-            similique
-            ut, velit voluptatum!</p>
-        <p>Architecto assumenda consectetur eligendi eveniet facilis impedit in iste, maxime modi molestiae nesciunt non
-            optio praesentium quasi quia rem temporibus totam vitae voluptas voluptate? Amet cum id magnam nostrum
-            quam.</p>
-        <p>Accusantium aliquam consequuntur cumque cupiditate dolore dolorum ea eaque eligendi eos, exercitationem
-            itaque
-            iusto magni maxime minima molestiae molestias neque odio placeat quae, quam quas qui quis sed sunt unde.</p>
+  </div>
+  
+  <!-- Dropdown Structure -->
+  <ul id='dropdown' class='dropdown-content'>
+    <li><a href="#!" class="white blue-text text-darken-3"><b>Info</b></a></li>
+  </ul>
+
+  <!-- Start Container-->
+  <div class="container">
+
+    <!-- FIRST PAGE -->
+    <div class="row register" id="firstPage">
+      <div class="col s12">
+        <div class="row">
+          <h4 class="center">Welcome</h4>
+        </div>
+        <div class="row">
+          <p class="center">Please select if you are a Customer or Restaurant</p>
+        </div>
+        <div class="row">
+          <button class="btn-large blue darken-3 darken-3 waves-effect waves-light col s6 offset-s3"
+            id="restaurant">Restaurant<i class="material-icons right"></i></button>
+        </div>
+        <div class="row">
+          <button class="btn-large blue darken-3 darken-3 waves-effect waves-light col s6 offset-s3"
+            id="costumer">Customer <i class="material-icons right"></i></button>
+        </div>
+      </div>
     </div>
-</main>
-<script src="js/jquery.3.5.1min.js"></script>
-<script src="js/materialize.1.0.0.min.js"></script>
-<script src="cordova.js"></script>
-<script defer src="js/app.js"></script>
+
+    <!-- HOME  PAGE -->
+    <div class="row spa " id="homePage">
+      <div class="col s12 m7">
+        <div class="card z-depth-5">
+          <div class="card-image">
+            <img src="img/flatten.jpg">
+          </div>
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab "><a class="active blue-text text-darken-3" href="#belgium"><b>Belgium</b></a></li>
+              <li class="tab"><a class=" blue-text text-darken-3" href="#global"><b>Global</b></a></li>
+            </ul>
+          </div>
+          <div class="card-content blue lighten-5">
+            <div id="belgium"></div>
+            <div id="global"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue lighten-5">
+            <div class="card-content black-text center">
+              <div class="switch">
+                <label>
+                  Customer
+                  <input id="switch" type="checkbox">
+                  <span class="lever"></span>
+                  Restaurant
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM RESTAURANT -->
+    <div class="row spa" id="restaurantForm">
+      <div class="col l6 m6 s12">
+        <form id="formrestaurant">
+          <div class="card-panel z-depth-5">
+            <h5 class="center">Restaurant information</h5>
+            <p class="center">Let's fight Covid-19 together!</p>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">local_dining</i>
+              <input id="restaurant_name" type="text" class="validate" required>
+              <label for="restaurant_name">Restaurant name *</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="telephonerest" type="tel" class="validate" required>
+              <label for="telephonerest">Telephone *</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="emailrest" type="email" class="validate" required>
+              <label for="emailrest">Email *</label>
+            </div>
+            <button class="btn-large blue darken-3
+                            waves-effect waves-light col s6 offset-s3" type="submit" action="name">Save<i
+                class="material-icons right"></i></button>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- FORM CUSTOMER -->
+    <div class="row spa valign-wrapper" id="customerForm">
+      <div class="col l6 m6 s12">
+        <form id="formcustomer">
+          <div class="card-panel z-depth-5">
+            <h5 class="center">Personal information</h5>
+            <p class="center">Let's fight Covid-19 together!</p>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="first_name" type="text" class="validate" required>
+              <label for="first_name">First Name *</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix"></i>
+              <input id="last_name" type="text" class="validate" required>
+              <label for="last_name">Last Name *</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="telephone" type="tel" class="validate" required>
+              <label for="telephone">Telephone *</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate" required>
+              <label for="email">Email *</label>
+            </div>
+            <button class="btn-large blue darken-3
+                        waves-effect waves-light col s6 offset-s3" type="submit" action="name">Save<i
+                class="material-icons right"></i></button>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- QR Generator  -->
+    <div class="row spa" id="qrGenerateTab">
+      <div class="col s12">
+        <div class="card z-depth-5">
+          <div class="card-image">
+          </div>
+        </div>
+        <div class="card z-depth-5">
+          <div class="card-content">
+            <p>This is your personal QR - code. Let customers scan this code to check them in.
+              You'll be able to alert the scanned customers in the alert tab.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR Scanner  -->
+    <div class="row spa" id="qrScanTab">
+      <div class="col s12">
+        <div class="row center">
+          <img src="img/qr-code.png">
+        </div>
+        <div class="row">
+          <button class="btn-large blue darken-3 waves-effect waves-light col s6 offset-s3" id="qrscan">Click to scan<i
+              class="material-icons right"></i></button>
+        </div>
+        <div class="row center" id="showqr"></div>
+      </div>
+    </div>
+
+    <!-- My Profile  -->
+    <div class="row spa" id="myprofileTab">
+      <div class="col s12 m6 margin">
+        <div class="card darken-1">
+          <div class="card-image">
+            <img src="img/myprofile.png">
+            <a class="btn-floating halfway-fab btn-large waves-effect waves-light red z-depth-5"><i id="editmyprofile"
+                class="material-icons large ">create</i></a>
+          </div>
+          <div class="card-content center-align" id="profilepreloader">
+            <div class="preloader-wrapper big active center-align">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                  <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-content" id="editprofile">
+            <span class="card-title blue-text text-darken-3"><b>My profile</b></span>
+            <form id="myprofileform">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Covid19  -->
+    <div class="row spa" id="reportProblemTab">
+      <div class="col s12 center-align margin">
+        <div class="card z-depth-5">
+          <div class="card-image">
+            <img src="img/alert.jpg">
+          </div>
+          <div class="card-content">
+            <p>Please select between which dates you want to alert customers!</p>
+          </div>
+          <div class="divider"></div>
+          <div class="card-content">
+            <label class="blue-text text-darken-3" for="start_date"><b>Start Date</b></label>
+            <input id="start_date" class="datepicker blue-text  text-darken-3" type="text">
+            <label class="blue-text  text-darken-3" for="end_date"><b>End Date</b></label>
+            <input id="end_date" type="text" class="datepicker blue-text  text-darken-3">
+          </div>
+          <div class="card-action"><a href="#" id="alertcustomers" style="width: 200px;"
+              class="btn-large red waves-effect waves-light">Alert</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- info  -->
+    <div class="row spa" id="infoTab">
+      <div class="col s12">
+        <div class="card z-depth-5">
+          <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+              <li class="tab "><a class="active blue-text text-darken-3" href="#restaurantinfo"><b>Restaurant</b></a>
+              </li>
+              <li class="tab"><a class=" blue-text text-darken-3" href="#customerinfo"><b>Customer</b></a></li>
+            </ul>
+          </div>
+          <div class="card-content blue lighten-5">
+            <div id="restaurantinfo">
+              <p>As a restaurant you will have your personal QR - code which your customers have to scan. In the alert
+                tab you'll be able to alert those customers, a mail will be automatically generated for you to send.</p>
+            </div>
+            <div id="customerinfo">
+              <p>Scan the QR - code of the restaurant you are visiting. This way restaurants can easily contact you when
+                there is a coronavirus outbreak at their restaurant. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 ">
+        <div class="card z-depth-5">
+          <div class="card-content">
+            <span class="card-title blue-text text-darken-3"><b>Personal information</b> </span>
+            <p><b>Name</b></p>
+            <input type="text" class="black-text validate" value="Wout Renkin">
+            <p><b>Email address</b></p>
+            <input type="text" class="black-text validate" value="r0631168@student.thomasmore.be">
+            <p><b>Telephone number</b></p>
+            <input type="text" class="black-text validate" value="+32477058708">
+          </div>
+          <div class="card-action blue-text text-darken-3">
+            <a href="tel:+32477058708"><i class="material-icons md-36 blue-text text-darken-3">phone</i></a>
+            <a href="sms:+32477058708"><i class="material-icons md-36 blue-text text-darken-3">sms</i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="col s12 m6">
+          <div class="card blue lighten-5">
+            <div class="card-content black-text center">
+              <p>Credits to freepik for vectors: </p>
+              <p><a href="http://www.freepik.com">Designed by pch.vector / Freepik</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- End container -->
+  </div>
+
+  <!-- footer navbar-->
+  <div class="footer">
+    <ul class="tabs white z-depth-2">
+      <li class="tab "><a class="blue-text text-darken-3" data-show="homePage" href=""><i
+            class="material-icons">home</i></a></li>
+      <li class="tab restauranttabs"><a class="blue-text text-darken-3" data-show="qrGenerateTab" href=""><i
+            class="material-icons">qr_code_2</i></a></li>
+      <li class="tab customertabs"><a class="blue-text text-darken-3" data-show="qrScanTab" href=""><i
+            class="material-icons">qr_code_2</i></a></li>
+      <li class="tab restauranttabs"><a class="blue-text text-darken-3" data-show="reportProblemTab" href=""><i
+            class="material-icons">report_problem</i></a></li>
+      <li class="tab "><a class="blue-text text-darken-3" data-show="myprofileTab" href=""><i
+            class="material-icons">account_circle</i></a></li>
+    </ul>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/checkrestaurant.js"></script>
+  <script src="js/generateQR.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/myprofile.js"></script>
+  <script src="js/scanQR.js"></script>
+  <script src="js/alertcustomers.js"></script>
+  <script src="js/homepage.js"></script>
+  <script defer src="js/app.js"></script>
+
 </body>
+
 </html>

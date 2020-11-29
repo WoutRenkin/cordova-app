@@ -1,0 +1,148 @@
+.spa {
+    display: none;
+}
+
+.register {
+    display: none;
+}
+
+.toast {
+    justify-content: center;
+}
+
+.btn-large {
+    border-radius: 25px;
+}
+
+body {
+   
+   
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  margin-bottom: 2% !important; 
+
+
+
+ }
+
+.container {
+    flex: 1 0 auto;
+    padding-bottom: 2% !important;
+    
+}
+
+#formrestaurant, #formcustomer, #reportProblemTab, #myprofileTab,  #qrGenerateTab, #firstPage, #infoTab {
+    position: absolute;
+    top: 12vh;
+    left: 1vh;
+    right: 1vh;
+    
+}
+
+
+#qrScanTab {
+    position: absolute;
+    top: 20vh;
+    left: 1vh;
+    right: 1vh;
+}
+
+
+.tab i.material-icons {
+height: 60px;
+line-height: 60px;
+}
+
+.tabs .tab{
+    height: 60px;
+
+}
+
+.tabs {
+    border-top:1px solid lightgray;
+    height: 60px;
+}
+.tabs .tab a.active {
+    background-color: rgba(0, 86, 184, 0.178) !important;
+}
+
+.tabs .indicator {
+background-color: #1565c0;
+height: 5px;
+} 
+.tab .a.active {
+    background-color: #1565c0 !important;
+}
+
+.datepicker-date-display {
+    background-color: #1565c0 !important;
+}
+td.is-selected,
+.month-prev:active,
+.month-prev:focus,
+.month-next:active,
+.month-next:focus {
+    background-color: #1565c0 !important
+}
+
+.datepicker-done,
+.datepicker-cancel
+ {
+    color: #1565c0 !important;
+    font-weight: bold;
+}
+
+.datepicker-clear {
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index:1;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #1565c0;
+  }
+
+  .switch label input[type=checkbox] + .lever:after {
+    background-color: #1565c0;
+  }
+
+  .switch label .lever {
+    background-color: #c4ced8 !important;
+   
+  }
+
+  .switch label {
+      color:black;
+      font-size: medium;
+      font-weight: bold;
+  }
+
+
+   /* label focus color */
+   .input-field input[type]:focus + label {
+    color: #1565c0 !important;
+}
+/* label underline focus color */
+  .input-field input[type]:focus {
+    border-bottom: 1px solid #1565c0 !important; 
+    box-shadow: 0 1px 0 0 #1565c0 !important;
+  }
+
+  .material-icons.active {
+    color: #1565c0 !important;
+    }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.margin {
+    margin-bottom: 10% !important;
+}
