@@ -4,7 +4,7 @@
 - **Klas**: 2APPAI C
 - **Email**: <a href="mailto:r0631168@student.thomasmore.be">r0631168@student.thomasmore.be</a>
 - **Studentnr**: r0631168
-- **Download APK URL**: ......
+- **Download APK URL**: https://wout-renkin.github.io/easytrack.io/assets/img/app/app-debug.apk
 
 ![Me](./picture/me.jpg?raw=true)
 
