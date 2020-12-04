@@ -15,15 +15,15 @@ let Forms = function () {
         let restaurant_id = localStorage.getItem("restaurant_id")
 
         //Some checks to initialize the correct form
-        if (restaurant == "true" && !restaurantinfo) {
+        if (restaurant == "true" && !restaurantinfo || restaurant == "true" && !restaurant_id) {
             $('#restaurantForm').show()
             $("#formrestaurant").submit(_restaurantData)
         }
 
-        if (restaurant == "true" && !restaurant_id) {
+        /* if (restaurant == "true" && !restaurant_id) {
             $('#restaurantForm').show()
             $("#formrestaurant").submit(_restaurantData)
-        }
+        } */
 
         if (restaurant == "false" && !userinfo) {
             $('#customerForm').show()
@@ -64,6 +64,7 @@ let Forms = function () {
             success: function (result) {
                 _setLocalStorage(_info)
                 localStorage.setItem('restaurant_id', result.id)
+                console.log("test")
 
             },
             error: function (result) {
